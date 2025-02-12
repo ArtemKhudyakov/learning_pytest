@@ -5,5 +5,6 @@ def up_first(msg):
     else:
         return msg
 
-msg = "ученье свет"
-print(up_first(msg))
+
+def reverse_string(string):
+    return string[::-1]
