@@ -42,3 +42,8 @@ def test_calculate_logarithm():
     with pytest.raises(ValueError):
         culc.calculate_logarithm(2, 0)
 
+@pytest.mark.parametrize(
+    "value, expected", [([1, 2, 3, 4], 2.5),([], 0), ([100, 500, 900], 500), ([1], 1)])
+def test_culc_avg(value, expected):
+    assert culc.culc_avg(value) == expected
+
