@@ -28,3 +28,11 @@ def test_reverse_string_letters(letters):
 )
 def test_reverse_string(value, expected):
     assert code.reverse_string(value) == expected
+
+def test_el_type_count():
+    assert code.el_type_count([1, '2', [], {}, ('3',)], int) == 1
+    assert code.el_type_count([1, '2', [], {}, ('3',), 3], int) == 2
+    assert code.el_type_count(['2', [], {}, ('3',)], int) == 0
+    assert code.el_type_count([], str) == 0
+    assert code.el_type_count(123456, int) == 0
+
